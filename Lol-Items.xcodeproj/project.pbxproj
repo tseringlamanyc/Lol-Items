@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845CE64B256F5EF900EEA0B4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 845CE64A256F5EF900EEA0B4 /* Kingfisher */; };
+		845CE64E256F5F1200EEA0B4 /* LeagueItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CE64D256F5F1200EEA0B4 /* LeagueItems.swift */; };
+		845CE651256F5F6A00EEA0B4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CE650256F5F6A00EEA0B4 /* ImageCell.swift */; };
+		845CE654256F60CD00EEA0B4 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CE653256F60CD00EEA0B4 /* APIClient.swift */; };
 		849772E9256DEB3F00BC0485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849772E8256DEB3F00BC0485 /* AppDelegate.swift */; };
 		849772EB256DEB3F00BC0485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849772EA256DEB3F00BC0485 /* SceneDelegate.swift */; };
 		849772ED256DEB3F00BC0485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849772EC256DEB3F00BC0485 /* ViewController.swift */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		845CE64D256F5F1200EEA0B4 /* LeagueItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueItems.swift; sourceTree = "<group>"; };
+		845CE650256F5F6A00EEA0B4 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		845CE653256F60CD00EEA0B4 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		849772E5256DEB3F00BC0485 /* Lol-Items.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lol-Items.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		849772E8256DEB3F00BC0485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849772EA256DEB3F00BC0485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845CE64B256F5EF900EEA0B4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,9 @@
 				849772E8256DEB3F00BC0485 /* AppDelegate.swift */,
 				849772EA256DEB3F00BC0485 /* SceneDelegate.swift */,
 				849772EC256DEB3F00BC0485 /* ViewController.swift */,
+				845CE64D256F5F1200EEA0B4 /* LeagueItems.swift */,
+				845CE653256F60CD00EEA0B4 /* APIClient.swift */,
+				845CE650256F5F6A00EEA0B4 /* ImageCell.swift */,
 				849772EE256DEB3F00BC0485 /* Main.storyboard */,
 				849772F1256DEB4000BC0485 /* Assets.xcassets */,
 				849772F3256DEB4000BC0485 /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = "Lol-Items";
+			packageProductDependencies = (
+				845CE64A256F5EF900EEA0B4 /* Kingfisher */,
+			);
 			productName = "Lol-Items";
 			productReference = 849772E5256DEB3F00BC0485 /* Lol-Items.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 849772DC256DEB3F00BC0485;
+			packageReferences = (
+				845CE649256F5EF900EEA0B4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 849772E6256DEB3F00BC0485 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				849772ED256DEB3F00BC0485 /* ViewController.swift in Sources */,
+				845CE64E256F5F1200EEA0B4 /* LeagueItems.swift in Sources */,
 				849772E9256DEB3F00BC0485 /* AppDelegate.swift in Sources */,
 				849772EB256DEB3F00BC0485 /* SceneDelegate.swift in Sources */,
+				845CE651256F5F6A00EEA0B4 /* ImageCell.swift in Sources */,
+				845CE654256F60CD00EEA0B4 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +361,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		845CE649256F5EF900EEA0B4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		845CE64A256F5EF900EEA0B4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 845CE649256F5EF900EEA0B4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 849772DD256DEB3F00BC0485 /* Project object */;
 }
