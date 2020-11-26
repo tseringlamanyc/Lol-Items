@@ -19,7 +19,7 @@ class APIClient {
     
     public func fetchItems(completion: @escaping (Result<Items, ApiError>) -> ()) {
         
-        let endpoint = "http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/item.json"
+        let endpoint = "https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/item.json"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.badURL(endpoint)))
