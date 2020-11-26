@@ -11,10 +11,12 @@ struct AllData: Decodable {
     let data: [String: Items]
 }
 
-struct Items: Decodable {
+struct Items: Decodable, Hashable {
     let image: Media
 }
 
-struct Media: Decodable {
-    let full: String 
+struct Media: Decodable, Hashable {
+    let full: String
+    
+    // http://ddragon.leagueoflegends.com/cdn/10.24.1/img/item/1001.png 
 }
