@@ -13,6 +13,7 @@ struct AllData: Decodable {
 
 struct Items: Decodable, Hashable {
     let image: Media
+    let name: String
     let tags: [String]
 }
 

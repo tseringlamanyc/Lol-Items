@@ -23,14 +23,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadItems()
         configureCollectionView()
         configureDataSource()
-        loadItems()
     }
     
     private func configureCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
-        collectionView.backgroundColor = .systemRed
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.reuseIdentifier)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(collectionView)
@@ -87,8 +87,7 @@ class ViewController: UIViewController {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.reuseIdentifier, for: indexPath) as? ImageCell else {
                 fatalError()
             }
-            cell.imageView.kf.setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/10.24.1/img/item/\(item.image.full).png"))
-            cell.imageView.contentMode = .scaleAspectFill
+            cell.textLabel.text = item.name
             cell.backgroundColor = .systemBlue
             return cell
         })

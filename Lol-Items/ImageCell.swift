@@ -11,12 +11,45 @@ class ImageCell: UICollectionViewCell {
     
     static let reuseIdentifier = "imageCell"
     
-    public lazy var imageView: UIImageView = {
-      let iv = UIImageView()
-      iv.image = UIImage(systemName: "photo")
-      iv.layer.cornerRadius = 8
-      iv.clipsToBounds = true
-      return iv
+//    public lazy var imageView: UIImageView = {
+//      let iv = UIImageView()
+//      iv.image = UIImage(systemName: "photo")
+//      iv.layer.cornerRadius = 8
+//      iv.clipsToBounds = true
+//      return iv
+//    }()
+//
+//    override init(frame: CGRect) {
+//      super.init(frame: frame)
+//      commonInit()
+//    }
+//
+//    required init?(coder: NSCoder) {
+//      super.init(coder: coder)
+//      commonInit()
+//    }
+//
+//    private func commonInit() {
+//      imageViewConstraints()
+//    }
+//
+//    private func imageViewConstraints() {
+//      addSubview(imageView)
+//      imageView.translatesAutoresizingMaskIntoConstraints = false
+//      NSLayoutConstraint.activate([
+//        imageView.topAnchor.constraint(equalTo: topAnchor),
+//        imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+//        imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+//        imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//      ])
+//    }
+//
+    
+    public lazy var textLabel: UILabel = {
+      let label = UILabel()
+      label.textAlignment = .center
+        label.backgroundColor = .systemGreen
+      return label
     }()
     
     override init(frame: CGRect) {
@@ -30,18 +63,18 @@ class ImageCell: UICollectionViewCell {
     }
     
     private func commonInit() {
-      imageViewConstraints()
+      textLabelConstraints()
     }
     
-    private func imageViewConstraints() {
-      addSubview(imageView)
-      imageView.translatesAutoresizingMaskIntoConstraints = false
+    private func textLabelConstraints() {
+      addSubview(textLabel)
+      textLabel.translatesAutoresizingMaskIntoConstraints = false
       NSLayoutConstraint.activate([
-        imageView.topAnchor.constraint(equalTo: topAnchor),
-        imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-        imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-        imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        textLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+        textLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+        textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+        textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
       ])
     }
-    
+
 }
