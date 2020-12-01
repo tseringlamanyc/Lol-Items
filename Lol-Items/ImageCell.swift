@@ -10,7 +10,7 @@ import UIKit
 class ImageCell: UICollectionViewCell {
     
     static let reuseIdentifier = "imageCell"
-    
+//
 //    public lazy var imageView: UIImageView = {
 //      let iv = UIImageView()
 //      iv.image = UIImage(systemName: "photo")
@@ -43,12 +43,12 @@ class ImageCell: UICollectionViewCell {
 //        imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
 //      ])
 //    }
-//
+
     
     public lazy var textLabel: UILabel = {
       let label = UILabel()
       label.textAlignment = .center
-        label.backgroundColor = .systemGreen
+        label.numberOfLines = 0 
       return label
     }()
     
